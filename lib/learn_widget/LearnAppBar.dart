@@ -8,8 +8,8 @@ class LearnAppBar extends StatefulWidget {
   }
 }
 
-// ignore: must_be_immutable
-class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStateMixin {
+class _LearnAppBarState extends State<LearnAppBar>
+    with SingleTickerProviderStateMixin {
   final String app_bar_bg = 'images/app_bar_bg.png';
   List<String> _more = ['A', 'B', 'C'];
   TabController _tabController;
@@ -49,7 +49,9 @@ class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStat
         // 是否使用默认样式
         automaticallyImplyLeading: true,
         // 标题左边的按钮
-        leading: IconButton(icon: Icon(Icons.menu), onPressed: () => print('Menu Button on pressed!')),
+        leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () => print('Menu Button on pressed!')),
         // 背景
         flexibleSpace: Image.asset(app_bar_bg, fit: BoxFit.fitWidth),
         // 标题右边的按钮事件
@@ -60,14 +62,12 @@ class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStat
                 Icons.more_vert,
                 color: Colors.blue,
               ),
-              itemBuilder: (context) =>
-                  List.generate(
-                      _more.length,
-                          (index) =>
-                          PopupMenuItem(
-                            value: _more[index],
-                            child: Text(_more[index]),
-                          )))
+              itemBuilder: (context) => List.generate(
+                  _more.length,
+                  (index) => PopupMenuItem(
+                        value: _more[index],
+                        child: Text(_more[index]),
+                      )))
         ],
         bottom: TabBar(
             labelColor: Colors.blue,
@@ -79,8 +79,7 @@ class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStat
             indicatorWeight: 2.0,
             tabs: List.generate(
                 _more.length,
-                    (index) =>
-                    Tab(
+                (index) => Tab(
                       text: _more[index],
                       icon: Icon(Icons.android),
                     ))),
@@ -91,6 +90,15 @@ class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStat
         onPageChanged: (position) {
           _tabController.index = position;
         },
+      ),
+      drawer: Drawer(
+        child: SafeArea(
+            child: Container(
+          child: Text(
+            'Drawer',
+            style: TextStyle(color: Colors.red, fontSize: 30.0),
+          ),
+        )),
       ),
     );
   }
@@ -106,8 +114,8 @@ class TabChangePage extends StatelessWidget {
     // 仅展示传入的内容
     return Container(
         alignment: Alignment.center,
-        child: Text(content, style: TextStyle(color: Theme
-            .of(context)
-            .primaryColor, fontSize: 30.0)));
+        child: Text(content,
+            style: TextStyle(
+                color: Theme.of(context).primaryColor, fontSize: 30.0)));
   }
 }

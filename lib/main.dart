@@ -7,9 +7,12 @@ import 'learn_widget/LearnAppBar.dart';
 import 'learn_widget/LearnButton.dart';
 import 'learn_widget/LearnImage.dart';
 import 'learn_widget/LearnText.dart';
+import 'learn_widget/LearnDrawer.dart';
+import 'learn_widget/LearnBottomNavigationBar.dart';
+import 'learn_widget/LearnCheckSwitch.dart';
 
 void main() {
-  runApp(LearnAppBar());
+  runApp(MyApp());
 
   if (Platform.isAndroid) {
     var style = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
@@ -26,7 +29,10 @@ class MyApp extends StatelessWidget {
 //      home: LearnText(),
 //      home: LearnImage(),
 //    home: LearnButton(),
-      home: LearnAppBar(),
+//      home: LearnAppBar(),
+//      home: LearnDrawer(),
+//      home: MyBottomNavigationBar(),
+      home: LearnCheckSwitch(),
     );
   }
 }
