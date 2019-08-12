@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
 
+import 'bottom_float_navigation/BottomNavigationFloatButton.dart';
 import 'bottom_navigation/BottomNavigationWidget.dart';
 import 'learn_widget/LearnAppBar.dart';
 import 'learn_widget/LearnButton.dart';
@@ -57,8 +58,9 @@ class MyApp extends StatelessWidget {
 //      home: HomeUI(),
 //      home: LearnNavigatorWithData(),
 //      home: LearnNavigatorReturn(),
-      home: BottomNavigationWidget(),
-      theme: ThemeData.light(),
+//      home: BottomNavigationWidget(),
+      home: BottomNavigationFloatButton(),
+      theme: ThemeData.dark(),
     );
   }
 }
