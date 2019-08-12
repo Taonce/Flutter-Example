@@ -8,8 +8,7 @@ class LearnAppBar extends StatefulWidget {
   }
 }
 
-class _LearnAppBarState extends State<LearnAppBar>
-    with SingleTickerProviderStateMixin {
+class _LearnAppBarState extends State<LearnAppBar> with SingleTickerProviderStateMixin {
   final String app_bar_bg = 'images/app_bar_bg.png';
   List<String> _more = ['A', 'B', 'C'];
   TabController _tabController;
@@ -49,9 +48,7 @@ class _LearnAppBarState extends State<LearnAppBar>
         // 是否使用默认样式
         automaticallyImplyLeading: true,
         // 标题左边的按钮
-        leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () => print('Menu Button on pressed!')),
+        leading: IconButton(icon: Icon(Icons.menu), onPressed: () => print('Menu Button on pressed!')),
         // 背景
         flexibleSpace: Image.asset(app_bar_bg, fit: BoxFit.fitWidth),
         // 标题右边的按钮事件
@@ -113,9 +110,8 @@ class TabChangePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // 仅展示传入的内容
     return Container(
+        padding: const EdgeInsets.only(top: 10.0),
         alignment: Alignment.center,
-        child: Text(content,
-            style: TextStyle(
-                color: Theme.of(context).primaryColor, fontSize: 30.0)));
+        child: Text(content, style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 30.0)));
   }
 }

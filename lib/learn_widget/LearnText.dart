@@ -7,9 +7,7 @@ class LearnText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('LearnText Demo')
-      ),
+      appBar: AppBar(title: Text('LearnText Demo')),
       body: Container(
         padding: const EdgeInsets.only(top: 10.0),
         child: Center(
@@ -17,7 +15,9 @@ class LearnText extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                '绿色背景黑色字',
+                'Hello Taonce, 热衷于Android开发，喜欢Kotlin和Flutter，并且愿意为此奋斗一生！',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style:
                     TextStyle(fontSize: 24.0, color: Colors.black, backgroundColor: Colors.green, letterSpacing: 2.0),
               ),

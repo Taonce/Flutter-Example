@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_flutter/learn_widget/LearnContainer.dart';
 
 import 'learn_widget/LearnAppBar.dart';
 import 'learn_widget/LearnButton.dart';
@@ -26,13 +27,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // 是否显示右上角的DEBUG字体
-//      home: LearnText(),
+      title: "LearnFlutter",
+      // home: LearnText(),
 //      home: LearnImage(),
 //    home: LearnButton(),
 //      home: LearnAppBar(),
 //      home: LearnDrawer(),
 //      home: MyBottomNavigationBar(),
-      home: LearnCheckSwitch(),
+//      home: LearnCheckSwitch(),
+home: LearnContainer(),
     );
   }
 }
