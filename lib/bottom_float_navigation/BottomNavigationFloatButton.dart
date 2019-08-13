@@ -7,8 +7,7 @@ class BottomNavigationFloatButton extends StatefulWidget {
   State<StatefulWidget> createState() => BottomNavigationFloatButtonState();
 }
 
-class BottomNavigationFloatButtonState
-    extends State<BottomNavigationFloatButton> {
+class BottomNavigationFloatButtonState extends State<BottomNavigationFloatButton> {
   int _index = 0;
   List<Widget> _list = List();
 
@@ -32,6 +31,7 @@ class BottomNavigationFloatButtonState
         backgroundColor: Colors.cyanAccent,
       ),
       bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
         color: Colors.cyanAccent,
         elevation: 5,
         child: Row(

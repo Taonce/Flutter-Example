@@ -3,9 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
+import 'package:my_flutter/search_bar/search_bar.dart';
 
 import 'bottom_float_navigation/BottomNavigationFloatButton.dart';
 import 'bottom_navigation/BottomNavigationWidget.dart';
+import 'frost_glass/frost_glass_ui.dart';
+import 'keep_alive/KeepAliveUI.dart';
 import 'learn_widget/LearnAppBar.dart';
 import 'learn_widget/LearnButton.dart';
 import 'package:my_flutter/learn_widget/image/LearnImage.dart';
@@ -22,6 +25,7 @@ import 'learn_widget/stack/LearnStack.dart';
 import 'navigation/LearnNavigator.dart';
 import 'navigation/LearnNavigatorReturn.dart';
 import 'navigation/LearnNavigatorWithData.dart';
+import 'route_animator/RouteMainPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,8 +63,12 @@ class MyApp extends StatelessWidget {
 //      home: LearnNavigatorWithData(),
 //      home: LearnNavigatorReturn(),
 //      home: BottomNavigationWidget(),
-      home: BottomNavigationFloatButton(),
-      theme: ThemeData.dark(),
+//      home: BottomNavigationFloatButton(),
+//      home: RouteMainPage(),
+//      home: FrostGlassUI(),
+//      home: KeepAliveUI(),
+      home: SearchBarUI(),
+      theme: ThemeData.light(),
     );
   }
 }
