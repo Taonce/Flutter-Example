@@ -19,12 +19,14 @@ import 'learn_widget/LearnCheckSwitch.dart';
 import 'learn_widget/card/LearnCard.dart';
 import 'learn_widget/column/LearnColumn.dart';
 import 'learn_widget/grid/LearnGridView.dart';
+import 'package:my_flutter/learn_widget/ful_widget/learn_ful_widget.dart';
 import 'learn_widget/list/LearnList.dart';
 import 'learn_widget/row/LearnRow.dart';
 import 'learn_widget/stack/LearnStack.dart';
 import 'navigation/LearnNavigator.dart';
 import 'navigation/LearnNavigatorReturn.dart';
 import 'navigation/LearnNavigatorWithData.dart';
+import 'request/request_baidu.dart';
 import 'route_animator/RouteMainPage.dart';
 
 void main() {
@@ -67,7 +69,9 @@ class MyApp extends StatelessWidget {
 //      home: RouteMainPage(),
 //      home: FrostGlassUI(),
 //      home: KeepAliveUI(),
-      home: SearchBarUI(),
+//      home: SearchBarUI(),
+//      home: RequestBD(),
+      home: LearnFulWidget(),
       theme: ThemeData.light(),
     );
   }
