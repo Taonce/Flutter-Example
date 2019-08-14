@@ -18,8 +18,10 @@ import 'learn_widget/LearnBottomNavigationBar.dart';
 import 'learn_widget/LearnCheckSwitch.dart';
 import 'learn_widget/card/LearnCard.dart';
 import 'learn_widget/column/LearnColumn.dart';
+import 'learn_widget/gesture_detector/learn_gesture_detetor.dart';
 import 'learn_widget/grid/LearnGridView.dart';
 import 'package:my_flutter/learn_widget/ful_widget/learn_ful_widget.dart';
+import 'learn_widget/intercept_return/learn_intercept_return.dart';
 import 'learn_widget/list/LearnList.dart';
 import 'learn_widget/progress/learn_progress.dart';
 import 'learn_widget/row/LearnRow.dart';
@@ -73,7 +75,9 @@ class MyApp extends StatelessWidget {
 //      home: SearchBarUI(),
 //      home: RequestBD(),
 //      home: LearnFulWidget(),
-      home: LearnProgress(),
+//      home: LearnProgress(),
+//      home: LearnInterceptReturn(),
+      home: LearnGestureDetector(),
       theme: ThemeData.light(),
     );
   }
