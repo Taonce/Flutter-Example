@@ -21,6 +21,7 @@ import 'learn_widget/column/LearnColumn.dart';
 import 'learn_widget/grid/LearnGridView.dart';
 import 'package:my_flutter/learn_widget/ful_widget/learn_ful_widget.dart';
 import 'learn_widget/list/LearnList.dart';
+import 'learn_widget/progress/learn_progress.dart';
 import 'learn_widget/row/LearnRow.dart';
 import 'learn_widget/stack/LearnStack.dart';
 import 'navigation/LearnNavigator.dart';
@@ -71,7 +72,8 @@ class MyApp extends StatelessWidget {
 //      home: KeepAliveUI(),
 //      home: SearchBarUI(),
 //      home: RequestBD(),
-      home: LearnFulWidget(),
+//      home: LearnFulWidget(),
+      home: LearnProgress(),
       theme: ThemeData.light(),
     );
   }

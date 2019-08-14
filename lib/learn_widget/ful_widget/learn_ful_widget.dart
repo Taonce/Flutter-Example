@@ -31,6 +31,8 @@ class FulWidgetState extends State<LearnFulWidget> {
       ),
       body: Center(
         child: Container(
+          width: MediaQuery.of(context).size.width,
+          margin: const EdgeInsets.all(10),
           padding: const EdgeInsets.all(10),
           child: Text(
             'I am Taonce $_count',
@@ -38,6 +40,7 @@ class FulWidgetState extends State<LearnFulWidget> {
               fontSize: 16,
               color: Colors.pinkAccent,
             ),
+            textAlign: TextAlign.center,
           ),
           decoration: BoxDecoration(
             color: Colors.lightBlueAccent,
