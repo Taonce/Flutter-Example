@@ -5,6 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
 import 'package:my_flutter/search_bar/search_bar.dart';
 
+import 'animation/animation_builder.dart';
+import 'animation/my_animation_widget.dart';
+import 'animation/scale_animation_ui.dart';
 import 'bottom_float_navigation/BottomNavigationFloatButton.dart';
 import 'bottom_navigation/BottomNavigationWidget.dart';
 import 'frost_glass/frost_glass_ui.dart';
@@ -18,6 +21,7 @@ import 'learn_widget/LearnBottomNavigationBar.dart';
 import 'learn_widget/LearnCheckSwitch.dart';
 import 'learn_widget/card/LearnCard.dart';
 import 'learn_widget/column/LearnColumn.dart';
+import 'learn_widget/event_bus/observable_ui.dart';
 import 'learn_widget/gesture_detector/learn_gesture_detetor.dart';
 import 'learn_widget/grid/LearnGridView.dart';
 import 'package:my_flutter/learn_widget/ful_widget/learn_ful_widget.dart';
@@ -77,7 +81,11 @@ class MyApp extends StatelessWidget {
 //      home: LearnFulWidget(),
 //      home: LearnProgress(),
 //      home: LearnInterceptReturn(),
-      home: LearnGestureDetector(),
+//      home: LearnGestureDetector(),
+//      home: ObservableUI(),
+//      home: ScaleAnimationUI(),
+//      home: MyAnimationWidgetUI(),
+      home: MyAnimationBuilderUI(),
       theme: ThemeData.light(),
     );
   }
