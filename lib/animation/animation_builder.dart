@@ -13,7 +13,7 @@ class MyAnimationBuilderState extends State with SingleTickerProviderStateMixin 
   void initState() {
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 30),
+      duration: const Duration(seconds: 3),
     );
     _animation = Tween(begin: 0.0, end: 300.0).animate(_controller);
     _controller.forward();

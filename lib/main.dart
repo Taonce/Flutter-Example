@@ -6,8 +6,11 @@ import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
 import 'package:my_flutter/search_bar/search_bar.dart';
 
 import 'animation/animation_builder.dart';
+import 'animation/animation_switcher_ui.dart';
+import 'animation/hero_animation/hero_animation_ui.dart';
 import 'animation/my_animation_widget.dart';
 import 'animation/scale_animation_ui.dart';
+import 'animation/stagger_animation/stagger_animation_ui.dart';
 import 'bottom_float_navigation/BottomNavigationFloatButton.dart';
 import 'bottom_navigation/BottomNavigationWidget.dart';
 import 'frost_glass/frost_glass_ui.dart';
@@ -85,7 +88,10 @@ class MyApp extends StatelessWidget {
 //      home: ObservableUI(),
 //      home: ScaleAnimationUI(),
 //      home: MyAnimationWidgetUI(),
-      home: MyAnimationBuilderUI(),
+//      home: MyAnimationBuilderUI(),
+//      home: HeroAnimationUI(),
+//      home: StaggerAnimationUI(),
+      home: AnimationSwitcherUI(),
       theme: ThemeData.light(),
     );
   }
