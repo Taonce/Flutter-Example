@@ -1,8 +1,11 @@
 import 'dart:io';
 
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
+import 'package:my_flutter/routes/Application.dart';
+import 'package:my_flutter/routes/route_a.dart';
 import 'package:my_flutter/search_bar/search_bar.dart';
 
 import 'animation/animation_builder.dart';
@@ -38,8 +41,12 @@ import 'navigation/LearnNavigatorReturn.dart';
 import 'navigation/LearnNavigatorWithData.dart';
 import 'request/request_baidu.dart';
 import 'route_animator/RouteMainPage.dart';
+import 'routes/route.dart';
 
 void main() {
+  final router = Router();
+  Routes.configRouters(router);
+  Application.router = router;
   runApp(MyApp());
 
   if (Platform.isAndroid) {
@@ -91,7 +98,8 @@ class MyApp extends StatelessWidget {
 //      home: MyAnimationBuilderUI(),
 //      home: HeroAnimationUI(),
 //      home: StaggerAnimationUI(),
-      home: AnimationSwitcherUI(),
+      home: RouteA(),
+      onGenerateRoute: Application.router.generator,
       theme: ThemeData.light(),
     );
   }
