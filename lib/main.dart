@@ -4,6 +4,9 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/learn_widget/container/LearnContainer.dart';
+import 'package:my_flutter/provider/color_model.dart';
+import 'package:my_flutter/provider/counter_model.dart';
+import 'package:my_flutter/provider/provider_a.dart';
 import 'package:my_flutter/routes/Application.dart';
 import 'package:my_flutter/routes/route_a.dart';
 import 'package:my_flutter/search_bar/search_bar.dart';
@@ -42,12 +45,26 @@ import 'navigation/LearnNavigatorWithData.dart';
 import 'request/request_baidu.dart';
 import 'route_animator/RouteMainPage.dart';
 import 'routes/route.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   final router = Router();
   Routes.configRouters(router);
   Application.router = router;
-  runApp(MyApp());
+
+  final counter = CounterModel();
+  final textSize = 16;
+  final color = ColorModel();
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(value: counter),
+        ChangeNotifierProvider.value(value: color),
+        Provider.value(value: textSize),
+      ],
+      child: MyApp(),
+    ),
+  );
 
   if (Platform.isAndroid) {
     var style = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
@@ -60,8 +77,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // 是否显示右上角的DEBUG字体
-      title: "LearnFlutter", // 这个title并不是界面的标题，而是应用在任务栏显示的标题
+      debugShowCheckedModeBanner: false,
+      // 是否显示右上角的DEBUG字体
+      title: "LearnFlutter",
+      // 这个title并不是界面的标题，而是应用在任务栏显示的标题
 //       home: LearnText(),
 //      home: LearnImage(),
 //      home: LearnButton(),
@@ -98,7 +117,8 @@ class MyApp extends StatelessWidget {
 //      home: MyAnimationBuilderUI(),
 //      home: HeroAnimationUI(),
 //      home: StaggerAnimationUI(),
-      home: RouteA(),
+//      home: RouteA(),
+      home: ProviderA(),
       onGenerateRoute: Application.router.generator,
       theme: ThemeData.light(),
     );
